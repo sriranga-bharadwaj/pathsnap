@@ -1,0 +1,18 @@
+# PathSnap - Laptop 1 (model + API + experiments). Python 3.12.
+# Laptop 2 needs only plain Python (no pip installs).
+# Pinned to the versions used to train the saved model: pickled sklearn models
+# can fail to load under a different scikit-learn version.
+numpy==2.5.5
+pandas==3.1.1
+scipy==1.18.1
+scikit-learn==1.9.1
+shapely==2.2.0
+pyproj==3.8.0
+networkx==3.7
+matplotlib==3.11.2
+folium==1.0.0
+joblib==1.6.0
+optuna==5.1.0
+lightgbm==4.7.0
+fastapi==0.163.2
+uvicorn==0.54.0
