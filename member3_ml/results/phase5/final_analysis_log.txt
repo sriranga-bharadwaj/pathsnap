@@ -1,0 +1,57 @@
+﻿00000000: top1=0.9824 errors={'unmatched': 0, 'candidate_miss': 1, 'direction_flip': 0, 'gap_fallback': 0, 'adjacent_arc': 41, 'parallel_road': 2}
+00000007: top1=0.9114 errors={'unmatched': 0, 'candidate_miss': 3, 'direction_flip': 111, 'gap_fallback': 0, 'adjacent_arc': 6, 'parallel_road': 0}
+00000009: top1=0.8818 errors={'unmatched': 0, 'candidate_miss': 27, 'direction_flip': 1, 'gap_fallback': 0, 'adjacent_arc': 76, 'parallel_road': 20}
+00000040: top1=0.9796 errors={'unmatched': 0, 'candidate_miss': 1, 'direction_flip': 4, 'gap_fallback': 0, 'adjacent_arc': 56, 'parallel_road': 0}
+00000052: top1=0.9809 errors={'unmatched': 0, 'candidate_miss': 0, 'direction_flip': 0, 'gap_fallback': 0, 'adjacent_arc': 5, 'parallel_road': 0}
+00000056: top1=0.9348 errors={'unmatched': 0, 'candidate_miss': 33, 'direction_flip': 1, 'gap_fallback': 0, 'adjacent_arc': 211, 'parallel_road': 13}
+00000065: top1=0.9180 errors={'unmatched': 0, 'candidate_miss': 0, 'direction_flip': 15, 'gap_fallback': 0, 'adjacent_arc': 47, 'parallel_road': 1}
+00000076: top1=0.9515 errors={'unmatched': 0, 'candidate_miss': 0, 'direction_flip': 3, 'gap_fallback': 7, 'adjacent_arc': 53, 'parallel_road': 9}
+00000077: top1=0.8796 errors={'unmatched': 0, 'candidate_miss': 2, 'direction_flip': 305, 'gap_fallback': 0, 'adjacent_arc': 160, 'parallel_road': 4}
+00000091: top1=0.9153 errors={'unmatched': 0, 'candidate_miss': 0, 'direction_flip': 0, 'gap_fallback': 0, 'adjacent_arc': 58, 'parallel_road': 16}
+
+=== per trip ===
+ trip_id  n_obs   top1  top1_high_conf  route_continuity  candidate_miss_rate  arc_precision  arc_recall  arc_f1  norm_edit_distance  inference_ms  unmatched_points  relaxed_transitions  multi_hop_transitions  direct_transitions  reversal_transitions  segment_starts
+00000000   2503 0.9824          0.9883            0.9992               0.0004         0.9227      1.0000  0.9598              0.0773         311.1                 0                    0                      9                2493                     0               1
+00000007   1354 0.9114          0.9974            1.0000               0.0022         0.9603      0.9837  0.9719              0.0547         170.5                 0                    0                      2                1349                     2               1
+00000009   1049 0.8818          0.9329            0.9914               0.0257         0.9465      0.9907  0.9681              0.0578         471.8                 0                    0                     54                 994                     0               1
+00000040   2995 0.9796          0.9869            0.9993               0.0003         0.9810      1.0000  0.9904              0.0344         395.2                 0                    2                     15                2974                     3               1
+00000052    262 0.9809          0.9805            0.9962               0.0000         1.0000      0.9789  0.9894              0.0211          75.8                 0                    0                      9                 252                     0               1
+00000056   3958 0.9348          0.9570            0.9952               0.0083         0.9718      0.9991  0.9852              0.0267         851.1                 0                    2                    131                3823                     1               1
+00000065    768 0.9180          0.9429            0.9974               0.0000         0.9603      1.0000  0.9797              0.0645         180.3                 0                    0                     13                 753                     0               2
+00000076   1486 0.9515          0.9628            0.9926               0.0000         0.9158      0.9893  0.9512              0.0976        1131.6                 0                    0                     46                1439                     0               1
+00000077   3911 0.8796          0.9181            0.9985               0.0005         0.8562      1.0000  0.9225              0.2815         658.7                 0                    0                     56                3851                     3               1
+00000091    874 0.9153          0.9462            0.9885               0.0000         0.9706      0.9957  0.9830              0.0455         354.3                 0                    0                     28                 845                     0               1
+
+=== summary ===
+                       trip_macro      pooled
+arc_f1                     0.9701         NaN
+arc_precision              0.9485         NaN
+arc_recall                 0.9937         NaN
+candidate_miss_rate        0.0038         NaN
+direct_transitions      1877.3000         NaN
+inference_ms             460.0400         NaN
+multi_hop_transitions     36.3000         NaN
+n_obs                   1916.0000  19160.0000
+norm_edit_distance         0.0761         NaN
+relaxed_transitions        0.4000         NaN
+reversal_transitions       0.9000         NaN
+route_continuity           0.9958         NaN
+segment_starts             1.1000         NaN
+top1                       0.9335      0.9326
+top1_high_conf             0.9613         NaN
+unmatched_points           0.0000         NaN
+
+=== error categories (counts) ===
+ trip_id  n_obs  unmatched  candidate_miss  direction_flip  gap_fallback  adjacent_arc  parallel_road
+00000000   2503          0               1               0             0            41              2
+00000007   1354          0               3             111             0             6              0
+00000009   1049          0              27               1             0            76             20
+00000040   2995          0               1               4             0            56              0
+00000052    262          0               0               0             0             5              0
+00000056   3958          0              33               1             0           211             13
+00000065    768          0               0              15             0            47              1
+00000076   1486          0               0               3             7            53              9
+00000077   3911          0               2             305             0           160              4
+00000091    874          0               0               0             0            58             16
+total: {'unmatched': 0, 'candidate_miss': 67, 'direction_flip': 440, 'gap_fallback': 7, 'adjacent_arc': 713, 'parallel_road': 65}  share of all errors: {'unmatched': 0.0, 'candidate_miss': 0.052, 'direction_flip': 0.341, 'gap_fallback': 0.005, 'adjacent_arc': 0.552, 'parallel_road': 0.05}
+maps for worst trips: ['00000077', '00000009', '00000007']
