@@ -1,0 +1,20 @@
+﻿kept train trips: 77 / 80; training obs (subsampled): 57995 of 174944 eligible; rows: 381756
+
+===== LightGBM =====
+  fold 0: macroF1=0.8831 top1=0.8207 logloss=0.1464 fit=1.2s
+  fold 1: macroF1=0.8877 top1=0.8332 logloss=0.1826 fit=1.3s
+  fold 2: macroF1=0.8940 top1=0.8427 logloss=0.1670 fit=1.3s
+  fold 3: macroF1=0.9010 top1=0.8508 logloss=0.1382 fit=1.2s
+  fold 4: macroF1=0.9078 top1=0.8641 logloss=0.1294 fit=1.3s
+  TEST top1=0.8439 (high 0.9265) macroF1=0.9028 logloss=0.1367 continuity=0.9543 train=1.5s infer=250ms
+
+=== model comparison ===
+               model  cv_macro_f1_mean  cv_macro_f1_std  cv_top1_mean  cv_top1_std  train_top1  test_top1  test_top1_high  test_cand_macro_f1  test_cand_accuracy  test_cand_precision  test_cand_recall  test_log_loss  test_candidate_miss_rate  test_route_continuity_trip_macro  train_time_s  infer_ms_per_1000_obs
+  LogisticRegression            0.8764           0.0115        0.8309       0.0145      0.8387     0.8322          0.9104              0.8826              0.9350               0.7937            0.8150         0.1790                    0.0035                            0.9483        0.7762                 0.6259
+          GaussianNB            0.8395           0.0122        0.8277       0.0174      0.8351     0.8325          0.9095              0.8422              0.9029               0.6543            0.8630         0.3977                    0.0035                            0.9433        0.3131                 2.8797
+        RandomForest            0.8936           0.0085        0.8409       0.0154      0.8907     0.8442          0.9245              0.9025              0.9476               0.8571            0.8163         0.1378                    0.0035                            0.9532       20.1146                14.2415
+HistGradientBoosting            0.8939           0.0089        0.8399       0.0147      0.8585     0.8418          0.9243              0.9017              0.9467               0.8450            0.8257         0.1436                    0.0035                            0.9516        4.7979                 9.5461
+                 MLP            0.8907           0.0084        0.8396       0.0156      0.8527     0.8419          0.9227              0.9010              0.9456               0.8321            0.8368         0.1422                    0.0035                            0.9551       75.7673                 1.5209
+            LightGBM            0.8947           0.0089        0.8423       0.0148      0.8588     0.8439          0.9265              0.9028              0.9473               0.8487            0.8255         0.1367                    0.0035                            0.9543        1.4930                13.0715
+
+Best by student-test Top-1: RandomForest (artifacts/ NOT changed: --only run)
