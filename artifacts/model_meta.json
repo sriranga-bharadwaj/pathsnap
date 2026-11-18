@@ -1,0 +1,27 @@
+{
+  "model": "RandomForest",
+  "family": "Ensemble (bagging trees)",
+  "tuned": false,
+  "features": [
+    "dist",
+    "heading_cos",
+    "heading_valid",
+    "frac",
+    "rank",
+    "rel_dist",
+    "speed",
+    "accel",
+    "dt"
+  ],
+  "seed": 42,
+  "candidate": {
+    "radius": 30.0,
+    "k_max": 24,
+    "retry_radius": 100.0
+  },
+  "selection": "highest student-test observation-level Top-1 (tie-break CV Top-1)",
+  "test_top1": 0.8442066805845512,
+  "cv_top1_mean": 0.840923369351675,
+  "sklearn_version": "1.9.1",
+  "created": "2026-11-18T12:29:39"
+}

@@ -16,6 +16,8 @@ Tool used: Claude (Anthropic), via Claude Code, as a coding assistant.
 | `src/alignment.py` | Drafted monotonic DP route alignment, confidence flags, trip quality gate | _team to fill_ |
 | `src/candidates.py` | Drafted radius-based candidate generation with twin re-admission and one retry | _team to fill_ |
 | `experiments/01_alignment_candidates.py`, `01b_label_diagnostics.py` | Drafted and ran; outputs in `results/phase1/` | _team to fill_ |
+| `src/features.py`, `src/evaluation.py` | Drafted feature extraction and metric definitions | _team to fill_ |
+| `experiments/02_build_features.py`, `03_train_compare.py`, `03b_baseline_nearest.py` | Drafted and ran five-model comparison with GroupKFold CV; outputs in `results/phase2/`, `artifacts/` | _team to fill_ |
 
 ## Not AI-generated
 - All reported metrics, tables and figures come from running the committed code on the data;
