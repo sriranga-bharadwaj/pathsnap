@@ -1,0 +1,138 @@
+﻿[train] 00000001: n=1315 H/M/L=1295/20/0 far=0.000 gate=keep net=0.4s align=0.2s
+[train] 00000002: n=7243 H/M/L=2928/3300/1015 far=0.120 gate=exclude net=0.1s align=0.8s
+[train] 00000003: n=821 H/M/L=567/254/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000004: n=1064 H/M/L=661/355/48 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000005: n=1045 H/M/L=1000/45/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000006: n=1450 H/M/L=1281/169/0 far=0.000 gate=keep net=0.1s align=0.2s
+[train] 00000008: n=3093 H/M/L=1454/1513/126 far=0.007 gate=keep net=0.0s align=0.3s
+[train] 00000010: n=2711 H/M/L=1517/1181/13 far=0.000 gate=keep net=0.0s align=0.3s
+[train] 00000011: n=2828 H/M/L=2688/139/1 far=0.000 gate=keep net=0.0s align=0.5s
+[train] 00000012: n=1608 H/M/L=1497/109/2 far=0.000 gate=keep net=0.1s align=0.2s
+[train] 00000013: n=2580 H/M/L=2432/148/0 far=0.000 gate=keep net=1.0s align=0.5s
+[train] 00000014: n=448 H/M/L=421/21/6 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000016: n=1305 H/M/L=767/484/54 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000018: n=379 H/M/L=361/17/1 far=0.000 gate=keep net=0.1s align=0.0s
+[train] 00000019: n=2354 H/M/L=1961/346/47 far=0.017 gate=keep net=0.3s align=0.4s
+[train] 00000020: n=2353 H/M/L=2018/253/82 far=0.015 gate=keep net=0.1s align=0.2s
+[train] 00000021: n=15783 H/M/L=9578/5889/316 far=0.001 gate=keep net=0.0s align=1.7s
+[train] 00000022: n=474 H/M/L=427/47/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000024: n=801 H/M/L=774/27/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000025: n=1179 H/M/L=1102/75/2 far=0.000 gate=keep net=0.2s align=0.1s
+[train] 00000026: n=361 H/M/L=316/45/0 far=0.000 gate=keep net=0.1s align=0.0s
+[train] 00000027: n=694 H/M/L=614/80/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000028: n=3565 H/M/L=3121/391/53 far=0.007 gate=keep net=0.4s align=0.6s
+[train] 00000029: n=733 H/M/L=661/72/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000031: n=4245 H/M/L=3443/799/3 far=0.000 gate=keep net=0.3s align=0.6s
+[train] 00000032: n=2464 H/M/L=2284/177/3 far=0.000 gate=keep net=0.8s align=0.4s
+[train] 00000033: n=5844 H/M/L=857/825/4162 far=0.590 gate=exclude net=0.1s align=0.6s
+[train] 00000034: n=3614 H/M/L=2792/810/12 far=0.000 gate=keep net=0.1s align=0.5s
+[train] 00000035: n=1643 H/M/L=1314/329/0 far=0.000 gate=keep net=0.1s align=0.2s
+[train] 00000036: n=1368 H/M/L=954/412/2 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000037: n=677 H/M/L=650/27/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000038: n=1287 H/M/L=1061/225/1 far=0.000 gate=keep net=0.1s align=0.2s
+[train] 00000039: n=363 H/M/L=349/14/0 far=0.000 gate=keep net=0.0s align=0.0s
+[train] 00000041: n=1019 H/M/L=952/65/2 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000042: n=7739 H/M/L=7183/554/2 far=0.000 gate=keep net=0.2s align=2.0s
+[train] 00000043: n=2322 H/M/L=1322/707/293 far=0.072 gate=keep_warn net=0.7s align=0.3s
+[train] 00000044: n=546 H/M/L=504/42/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000045: n=640 H/M/L=552/85/3 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000046: n=1401 H/M/L=894/483/24 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000047: n=1272 H/M/L=1024/248/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000048: n=1240 H/M/L=844/392/4 far=0.000 gate=keep net=0.0s align=0.2s
+[train] 00000050: n=518 H/M/L=475/43/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000051: n=984 H/M/L=737/247/0 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000053: n=1304 H/M/L=1240/62/2 far=0.000 gate=keep net=0.4s align=0.2s
+[train] 00000054: n=19313 H/M/L=1505/385/17423 far=0.889 gate=exclude net=0.4s align=2.2s
+[train] 00000055: n=2472 H/M/L=2424/46/2 far=0.000 gate=keep net=0.6s align=0.3s
+[train] 00000057: n=1645 H/M/L=1308/320/17 far=0.008 gate=keep net=0.1s align=0.2s
+[train] 00000058: n=599 H/M/L=548/51/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000060: n=854 H/M/L=748/106/0 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000061: n=1430 H/M/L=875/502/53 far=0.008 gate=keep net=0.0s align=0.2s
+[train] 00000062: n=3378 H/M/L=2764/614/0 far=0.000 gate=keep net=0.1s align=0.4s
+[train] 00000063: n=2781 H/M/L=2240/539/2 far=0.000 gate=keep net=0.0s align=0.4s
+[train] 00000064: n=2093 H/M/L=1975/113/5 far=0.000 gate=keep net=0.1s align=0.3s
+[train] 00000066: n=4325 H/M/L=3473/439/413 far=0.090 gate=keep_warn net=0.1s align=0.5s
+[train] 00000068: n=747 H/M/L=670/73/4 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000069: n=2067 H/M/L=1618/446/3 far=0.000 gate=keep net=0.0s align=0.3s
+[train] 00000070: n=2076 H/M/L=1452/621/3 far=0.000 gate=keep net=0.0s align=0.2s
+[train] 00000071: n=850 H/M/L=824/25/1 far=0.000 gate=keep net=0.1s align=0.1s
+[train] 00000072: n=969 H/M/L=643/325/1 far=0.000 gate=keep net=0.0s align=0.1s
+[train] 00000074: n=1929 H/M/L=1744/182/3 far=0.000 gate=keep net=0.2s align=0.2s
+[train] 00000075: n=1628 H/M/L=1123/497/8 far=0.000 gate=keep net=0.0s align=0.2s
+[train] 00000078: n=2909 H/M/L=2724/133/52 far=0.002 gate=keep net=0.4s align=1.7s
+[train] 00000079: n=689 H/M/L=596/93/0 far=0.000 gate=keep net=0.5s align=0.2s
+[train] 00000080: n=2510 H/M/L=1418/989/103 far=0.001 gate=keep net=0.1s align=0.6s
+[train] 00000081: n=3224 H/M/L=2375/616/233 far=0.044 gate=keep net=0.0s align=1.2s
+[train] 00000082: n=4268 H/M/L=2487/1772/9 far=0.000 gate=keep net=0.2s align=1.2s
+[train] 00000083: n=1507 H/M/L=948/559/0 far=0.000 gate=keep net=0.1s align=0.4s
+[train] 00000084: n=16031 H/M/L=9568/5399/1064 far=0.037 gate=keep net=0.3s align=6.6s
+[train] 00000085: n=1092 H/M/L=920/148/24 far=0.011 gate=keep net=0.0s align=0.3s
+[train] 00000086: n=4143 H/M/L=3910/232/1 far=0.000 gate=keep net=1.2s align=1.8s
+[train] 00000088: n=876 H/M/L=736/140/0 far=0.000 gate=keep net=0.2s align=0.3s
+[train] 00000089: n=1228 H/M/L=1025/202/1 far=0.000 gate=keep net=0.2s align=0.5s
+[train] 00000090: n=536 H/M/L=520/16/0 far=0.000 gate=keep net=0.1s align=0.2s
+[train] 00000092: n=7892 H/M/L=6995/893/4 far=0.000 gate=keep net=0.3s align=6.4s
+[train] 00000093: n=1211 H/M/L=919/262/30 far=0.007 gate=keep net=0.4s align=0.5s
+[train] 00000095: n=1551 H/M/L=1132/419/0 far=0.000 gate=keep net=0.1s align=0.3s
+[train] 00000096: n=3271 H/M/L=2687/436/148 far=0.044 gate=keep net=0.2s align=1.1s
+[train] 00000097: n=1740 H/M/L=1690/50/0 far=0.000 gate=keep net=0.2s align=0.7s
+[train] 00000098: n=5584 H/M/L=5205/329/50 far=0.002 gate=keep net=0.5s align=2.7s
+[train] 00000099: n=2322 H/M/L=1837/411/74 far=0.015 gate=keep net=0.4s align=1.1s
+[student_test] 00000000: n=2503 H/M/L=2220/281/2 far=0.000 gate=n/a (not gated) net=0.2s align=0.6s
+[student_test] 00000007: n=1354 H/M/L=1141/186/27 far=0.000 gate=n/a (not gated) net=0.0s align=0.3s
+[student_test] 00000009: n=1049 H/M/L=924/89/36 far=0.000 gate=n/a (not gated) net=0.1s align=0.4s
+[student_test] 00000040: n=2995 H/M/L=2602/344/49 far=0.000 gate=n/a (not gated) net=0.1s align=1.0s
+[student_test] 00000052: n=262 H/M/L=256/6/0 far=0.000 gate=n/a (not gated) net=0.0s align=0.1s
+[student_test] 00000056: n=3958 H/M/L=3560/360/38 far=0.007 gate=n/a (not gated) net=0.1s align=2.2s
+[student_test] 00000065: n=768 H/M/L=666/102/0 far=0.000 gate=n/a (not gated) net=0.1s align=0.2s
+[student_test] 00000076: n=1486 H/M/L=1236/249/1 far=0.000 gate=n/a (not gated) net=0.3s align=0.5s
+[student_test] 00000077: n=3911 H/M/L=2258/1640/13 far=0.000 gate=n/a (not gated) net=0.1s align=1.2s
+[student_test] 00000091: n=874 H/M/L=743/131/0 far=0.000 gate=n/a (not gated) net=0.1s align=0.2s
+
+=== alignment summary ===
+                n_points    high  medium    low  progress_inconsistent  trips  high_share  medium_share  low_share
+set                                                                                                               
+student_test       19160   15606    3388    166                    373     10      0.8145        0.1768     0.0087
+train_excluded     32400    5290    4510  22600                  10638      3      0.1633        0.1392     0.6975
+train_kept        176017  137208   35399   3410                   2032     77      0.7795        0.2011     0.0194
+
+=== quality gate (train) ===
+       partition   trip_id  n_points  far_share             gate
+44         train  00000054     19313   0.888987          exclude
+26         train  00000033      5844   0.590349          exclude
+1          train  00000002      7243   0.119840          exclude
+53         train  00000066      4325   0.090173        keep_warn
+35         train  00000043      2322   0.071921        keep_warn
+85  student_test  00000056      3958   0.006822  n/a (not gated)
+80  student_test  00000000      2503   0.000000  n/a (not gated)
+81  student_test  00000007      1354   0.000000  n/a (not gated)
+82  student_test  00000009      1049   0.000000  n/a (not gated)
+83  student_test  00000040      2995   0.000000  n/a (not gated)
+84  student_test  00000052       262   0.000000  n/a (not gated)
+86  student_test  00000065       768   0.000000  n/a (not gated)
+87  student_test  00000076      1486   0.000000  n/a (not gated)
+88  student_test  00000077      3911   0.000000  n/a (not gated)
+89  student_test  00000091       874   0.000000  n/a (not gated)
+
+=== candidate sweep ===
+               set       cap  radius  trips  n_points  recall_all  miss_rate_all  recall_high  cand_mean  cand_p95_pooled  cand_max  retried_obs  unmatched  latency_ms_per_1000_obs
+0     student_test    capped    15.0     10     19160      0.9859         0.0141          1.0     4.1685             12.0        26         1162          0                  14.0146
+1     student_test    capped    30.0     10     19160      0.9965         0.0035          1.0     6.0860             16.0        26          105          0                  14.5054
+2     student_test    capped    50.0     10     19160      0.9986         0.0014          1.0    10.0730             24.0        27            0          0                  19.7651
+3     student_test  uncapped    15.0     10     19160      0.9859         0.0141          1.0     4.6399             12.0       114         1162          0                   9.2241
+4     student_test  uncapped    30.0     10     19160      0.9965         0.0035          1.0     6.1768             16.0        66          105          0                  10.5768
+5     student_test  uncapped    50.0     10     19160      0.9986         0.0014          1.0    10.9101             29.0       123            0          0                  16.8088
+6   train_excluded    capped    15.0      3     32400      0.3291         0.6709          1.0     5.1807             20.0        26        17487       1377                   8.2419
+7   train_excluded    capped    30.0      3     32400      0.3318         0.6682          1.0     6.1148             20.0        26        16398       1377                   8.1638
+8   train_excluded    capped    50.0      3     32400      0.3456         0.6544          1.0     7.7714             24.0        26        15697       1377                  10.4561
+9   train_excluded  uncapped    15.0      3     32400      0.3373         0.6627          1.0     6.3627             20.0       112        17487       1377                   7.5411
+10  train_excluded  uncapped    30.0      3     32400      0.3332         0.6668          1.0     6.5565             20.0        82        16398       1377                   7.5385
+11  train_excluded  uncapped    50.0      3     32400      0.3546         0.6454          1.0     8.4416             28.0        70        15697       1377                   8.7043
+12      train_kept    capped    15.0     77    176017      0.9773         0.0227          1.0     3.6964             10.0        27         9498         40                   7.1872
+13      train_kept    capped    30.0     77    176017      0.9939         0.0061          1.0     5.6075             16.0        26         2465         40                   8.3137
+14      train_kept    capped    50.0     77    176017      0.9962         0.0038          1.0     8.7561             24.0        27         1116         40                  13.9925
+15      train_kept  uncapped    15.0     77    176017      0.9774         0.0226          1.0     3.9265             10.0       202         9498         40                   6.0797
+16      train_kept  uncapped    30.0     77    176017      0.9941         0.0059          1.0     5.7531             16.0       156         2465         40                   7.4963
+17      train_kept  uncapped    50.0     77    176017      0.9965         0.0035          1.0     9.5626             28.0       148         1116         40                  11.3683
+
+Knee rule (TRAIN kept, capped): smallest radius with recall >= recall@50m - 0.005 -> 30 m (recall@50m = 0.9962)

@@ -12,6 +12,10 @@ Tool used: Claude (Anthropic), via Claude Code, as a coding assistant.
 | `src/data.py` | Drafted loaders and the per-trip AEQD projection | _team to fill_ |
 | `experiments/00_eda.py` | Drafted EDA script; ran it on train + student_test; outputs in `results/eda/` | _team to fill_ |
 | `architecture.md` | Drafted the architecture description and diagram | _team to fill_ |
+| `src/geometry.py`, `src/network.py`, `src/preprocess.py` | Drafted geometry helpers, per-trip network + STRtree, track preprocessing | _team to fill_ |
+| `src/alignment.py` | Drafted monotonic DP route alignment, confidence flags, trip quality gate | _team to fill_ |
+| `src/candidates.py` | Drafted radius-based candidate generation with twin re-admission and one retry | _team to fill_ |
+| `experiments/01_alignment_candidates.py`, `01b_label_diagnostics.py` | Drafted and ran; outputs in `results/phase1/` | _team to fill_ |
 
 ## Not AI-generated
 - All reported metrics, tables and figures come from running the committed code on the data;
