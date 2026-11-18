@@ -59,6 +59,43 @@ def normalise_per_obs(obs, score, n_obs):
     return score / np.maximum(tot[obs], 1e-12)
 
 
+def compress(seq):
+    """Drop consecutive repeats: [5,5,7,7,7,5] -> [5,7,5]."""
+    seq = np.asarray(seq)
+    if len(seq) == 0:
+        return seq
+    return seq[np.r_[True, seq[1:] != seq[:-1]]]
+
+
+def arc_set_prf(pred_arcs, ref_arcs):
+    """Route-level precision / recall / F1 on the SET of arcs (order ignored)."""
+    P, R = set(np.asarray(pred_arcs).tolist()), set(np.asarray(ref_arcs).tolist())
+    tp = len(P & R)
+    prec = tp / len(P) if P else 0.0
+    rec = tp / len(R) if R else 0.0
+    f1 = 2 * prec * rec / (prec + rec) if prec + rec else 0.0
+    return prec, rec, f1
+
+
+def norm_edit_distance(a, b):
+    """Levenshtein distance between two arc sequences / max(len). 0 = identical, 1 = disjoint.
+    Row-vectorised DP: insertions are resolved with a running minimum of (row - j) + j."""
+    a, b = np.asarray(a), np.asarray(b)
+    if len(a) == 0 or len(b) == 0:
+        return 1.0
+    prev = np.arange(len(b) + 1, dtype=np.int64)
+    j = np.arange(len(b) + 1)
+    for i in range(1, len(a) + 1):
+        cur = np.empty_like(prev)
+        cur[0] = i
+        sub = prev[:-1] + (b != a[i - 1])          # substitution / match
+        dele = prev[1:] + 1                         # deletion
+        cur[1:] = np.minimum(sub, dele)
+        cur = np.minimum.accumulate(cur - j) + j    # insertion: cur[j] = min(cur[j], cur[j-1] + 1)
+        prev = cur
+    return float(prev[-1] / max(len(a), len(b)))
+
+
 def route_continuity(pred_arc, segment, a_from, a_to, n_nodes):
     i = np.arange(len(pred_arc) - 1)
     ok = (segment[i] == segment[i + 1]) & (pred_arc[i] >= 0) & (pred_arc[i + 1] >= 0)
