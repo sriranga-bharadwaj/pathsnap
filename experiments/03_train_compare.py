@@ -45,6 +45,11 @@ from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassif
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import GroupKFold, GroupShuffleSplit
 from sklearn.metrics import log_loss
+from lightgbm import LGBMClassifier
+
+# `--only <model>`: train/evaluate just that model, merge its rows into the existing result CSVs,
+# and leave artifacts/ untouched (used to add LightGBM after the first five-model run).
+ONLY = sys.argv[sys.argv.index("--only") + 1] if "--only" in sys.argv else None
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
@@ -80,6 +85,10 @@ def make_models():
             ("clf", MLPClassifier(hidden_layer_sizes=(64, 32), alpha=1e-4, batch_size=512,
                                   learning_rate_init=1e-3, max_iter=40, early_stopping=False,
                                   random_state=SEED))])),
+        # 6th model, added after the first comparison (run with: --only LightGBM)
+        "LightGBM": ("Boosting (leaf-wise, LightGBM)", LGBMClassifier(
+            n_estimators=300, learning_rate=0.05, num_leaves=31, min_child_samples=20,
+            subsample=1.0, colsample_bytree=1.0, n_jobs=-1, random_state=SEED, verbose=-1)),
     }
 
 
@@ -158,6 +167,8 @@ def main():
 
     rows, fold_rows, trip_rows, cms = [], [], [], {}
     for name, (family, _) in make_models().items():
+        if ONLY and name != ONLY:
+            continue
         print(f"\n===== {name} =====", flush=True)
         # ---------- group CV ----------
         oof = np.full(len(TR["y"]), np.nan)
@@ -232,30 +243,44 @@ def main():
               f"logloss={r['test_log_loss']:.4f} continuity={r['test_route_continuity_trip_macro']:.4f} "
               f"train={train_s:.1f}s infer={infer_ms:.0f}ms", flush=True)
 
-    res = pd.DataFrame(rows)
+    new = pd.DataFrame(rows)
+    res, folds_df, trips_df = new, pd.DataFrame(fold_rows), pd.DataFrame(trip_rows)
+    if ONLY:   # merge into the existing tables (replace any previous rows of this model)
+        def merge(df, f):
+            old = pd.read_csv(OUT / f, dtype={"trip_id": str})
+            return pd.concat([old[old.model != ONLY], df], ignore_index=True)
+        res, folds_df, trips_df = (merge(new, "model_comparison.csv"), merge(folds_df, "cv_folds.csv"),
+                                   merge(trips_df, "per_trip_top1.csv"))
+        for n_ in res.model:        # confusion matrices of the other models from their saved fits
+            if n_ not in cms:
+                p_ = joblib.load(ROOT / "cache" / "models" / f"{n_}.joblib").predict_proba(TE["X"])[:, 1]
+                cms[n_] = np.array(candidate_metrics(TE["y"], p_)["confusion"])
     res.to_csv(OUT / "model_comparison.csv", index=False)
-    pd.DataFrame(fold_rows).to_csv(OUT / "cv_folds.csv", index=False)
-    pd.DataFrame(trip_rows).to_csv(OUT / "per_trip_top1.csv", index=False)
+    folds_df.to_csv(OUT / "cv_folds.csv", index=False)
+    trips_df.to_csv(OUT / "per_trip_top1.csv", index=False)
 
-    # ---------- experiment log (append) ----------
-    log = res.copy()
+    # ---------- experiment log (append only the models run now) ----------
+    log = new.copy()
     log.insert(0, "timestamp", datetime.now().isoformat(timespec="seconds"))
     log.insert(1, "phase", "2_untuned_comparison")
     log["candidate_config"] = json.dumps(dict(radius=RADIUS, k_max=K_MAX, retry_radius=RETRY_RADIUS))
     log["subsample_max_obs_per_trip"] = MAX_OBS_PER_TRIP
-    log.to_csv(LOG, mode="a", header=not LOG.exists(), index=False)
+    if LOG.exists():   # pd.concat keeps columns aligned even if the log has extra columns
+        log = pd.concat([pd.read_csv(LOG), log], ignore_index=True)
+    log.to_csv(LOG, index=False)
 
-    # ---------- best model -> artifacts ----------
+    # ---------- best model -> artifacts (full run only) ----------
     best = res.sort_values(["test_top1", "cv_top1_mean"], ascending=False).iloc[0]
-    m = joblib.load(ROOT / "cache" / "models" / f"{best.model}.joblib")
-    joblib.dump(m, ROOT / "artifacts" / "model.joblib", compress=3)   # compressed: GitHub 100 MB file limit
-    meta = dict(model=best.model, family=best.family, tuned=False, features=FEATURES, seed=SEED,
-                candidate=dict(radius=RADIUS, k_max=K_MAX, retry_radius=RETRY_RADIUS),
-                selection="highest student-test observation-level Top-1 (tie-break CV Top-1)",
-                test_top1=float(best.test_top1), cv_top1_mean=float(best.cv_top1_mean),
-                sklearn_version=__import__("sklearn").__version__,
-                created=datetime.now().isoformat(timespec="seconds"))
-    (ROOT / "artifacts" / "model_meta.json").write_text(json.dumps(meta, indent=2))
+    if not ONLY:
+        m = joblib.load(ROOT / "cache" / "models" / f"{best.model}.joblib")
+        joblib.dump(m, ROOT / "artifacts" / "model.joblib", compress=3)   # compressed: GitHub 100 MB file limit
+        meta = dict(model=best.model, family=best.family, tuned=False, features=FEATURES, seed=SEED,
+                    candidate=dict(radius=RADIUS, k_max=K_MAX, retry_radius=RETRY_RADIUS),
+                    selection="highest student-test observation-level Top-1 (tie-break CV Top-1)",
+                    test_top1=float(best.test_top1), cv_top1_mean=float(best.cv_top1_mean),
+                    sklearn_version=__import__("sklearn").__version__,
+                    created=datetime.now().isoformat(timespec="seconds"))
+        (ROOT / "artifacts" / "model_meta.json").write_text(json.dumps(meta, indent=2))
 
     plots(res, cms, TR, kept_trip_idx, train_rows, w_rows)
     pd.set_option("display.width", 250); pd.set_option("display.max_columns", 40)
@@ -265,7 +290,8 @@ def main():
             "train_time_s", "infer_ms_per_1000_obs"]
     print("\n=== model comparison ===")
     print(res[cols].round(4).to_string(index=False))
-    print(f"\nBest by student-test Top-1: {best.model} -> artifacts/model.joblib")
+    print(f"\nBest by student-test Top-1: {best.model}"
+          + (" (artifacts/ NOT changed: --only run)" if ONLY else " -> artifacts/model.joblib"))
 
 
 def plots(res, cms, TR, kept_trip_idx, train_rows, w_rows):
@@ -313,6 +339,9 @@ def plots(res, cms, TR, kept_trip_idx, train_rows, w_rows):
     fig.tight_layout(); fig.savefig(OUT / "fig_confusion_matrices.png", dpi=130); plt.close(fig)
 
     # MLP: real per-epoch training loss and group-held-out validation loss via partial_fit
+    # (skipped on an --only run of another model: the existing MLP curve stays valid)
+    if ONLY and ONLY != "MLP":
+        return
     gss = GroupShuffleSplit(n_splits=1, test_size=0.15, random_state=SEED)
     tr_t, va_t = next(gss.split(kept_trip_idx, groups=kept_trip_idx))
     tr_r = train_rows & np.isin(TR["row_trip"], kept_trip_idx[tr_t])

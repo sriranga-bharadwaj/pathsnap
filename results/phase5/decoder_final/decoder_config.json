@@ -1,0 +1,14 @@
+{
+  "alpha": 0.1,
+  "beta": 20.0,
+  "reversal_penalty": 20.0,
+  "v_max_mps": 50.0,
+  "cutoff_tol_m": 150.0,
+  "hard_cap_m": 3000.0,
+  "relax_cutoff_m": 10000.0,
+  "backward_tol_m": 15.0,
+  "jump_penalty": 50.0,
+  "gap_break_s": 60.0,
+  "tuned_on": "train OOF probabilities (RandomForest.npz), 77 gate-kept trips",
+  "created": "2026-11-18T15:19:16"
+}

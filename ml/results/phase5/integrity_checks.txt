@@ -1,7 +1,0 @@
-PASS 1. no trip in two partitions (train=80, student_test=10)
-PASS 2. GroupKFold(5) over 77 kept train trips: no trip in both train and validation
-PASS 3. deployed model (RandomForest, tuned=False) trained on 381756 rows from 77 gate-kept TRAIN trips only; student_test trips disjoint; scaler/model fitted in pipelines on training rows only
-PASS 4. prediction modules pipeline, preprocess, network, candidates, features, hmm, geometry never read .route
-PASS 5. API responses (10/10 smoke-test trips) contain no reference-route / label keys; api/main.py never loads .route
-PASS 6. experiments read only partitions ['student_test', 'train']; no evaluator data referenced
-ALL CHECKS PASSED

@@ -24,9 +24,9 @@ GROUPS = {
         commit="Add Laptop-2 evaluator UI (Leaflet, configurable API URL, offline-safe)",
         match=lambda p: p.startswith("ui/")),
     "member2_api_deploy": dict(
-        title="FastAPI backend, prediction pipeline, server-side evaluation, deployment docs",
-        commit="Add FastAPI backend, prediction pipeline, server-side evaluation and deployment docs",
-        match=lambda p: (p.startswith(("api/", "scripts/", "results/phase4/", "results/phase5/api_"))
+        title="FastAPI backend, prediction pipeline, server-side evaluation, deployment docs, report builder",
+        commit="Add FastAPI backend, prediction pipeline, server-side evaluation, deployment docs and report",
+        match=lambda p: (p.startswith(("api/", "scripts/", "results/phase4/", "results/phase5/api_", "report/"))
                          or p in {"src/pipeline.py", "src/server_eval.py", "run_api.bat", "run_api.sh",
                                   "README.md", "SETUP_FOR_ASSISTANT.md", "architecture.md", ".gitignore"})),
     "member3_ml": dict(

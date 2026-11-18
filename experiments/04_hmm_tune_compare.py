@@ -39,7 +39,8 @@ from src.hmm import precompute, viterbi, decode, V_MAX, TOL, HARD_CAP, RELAX_CUT
 from src.evaluation import (top1_predictions, normalise_per_obs, route_continuity, arc_set_prf,
                             norm_edit_distance, compress)
 
-OUT = ROOT / "results" / "phase3"
+# output folder: results/phase3 by default; Phase 5 re-runs with `--out results/phase5/decoder`
+OUT = ROOT / (sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else "results/phase3")
 FEAT = ROOT / "cache" / "features"
 # Run 1 (alpha 0.5-2, penalty 2-10) -> optimum on the edge (alpha=0.5, penalty=10, top1 0.9093).
 # Run 2 (alpha 0.25-2, penalty 5-40) -> still on the edge (alpha=0.25, penalty=40, top1 0.9156).
@@ -48,7 +49,14 @@ FEAT = ROOT / "cache" / "features"
 # depends only on alpha*beta (here 2 m) and penalty/alpha. Points along that ridge
 # (e.g. alpha=1, beta=2, penalty=80: 0.9163) score almost the same; the "edge" is a scale redundancy.
 GRID = dict(alpha=[0.1, 0.25, 0.5, 1.0], beta=[2.0, 5.0, 10.0, 20.0], reversal_penalty=[10.0, 20.0, 40.0, 80.0])
-MODEL_NAME = json.loads((ROOT / "artifacts" / "model_meta.json").read_text())["model"]
+META = json.loads((ROOT / "artifacts" / "model_meta.json").read_text())
+# `--model <name>`: evaluate a NON-deployed candidate (cache/models/<name>.joblib, cache/oof/<name>.npz);
+# its decoder config is written only to OUT, artifacts/ is left untouched.
+MODEL_OVERRIDE = sys.argv[sys.argv.index("--model") + 1] if "--model" in sys.argv else None
+MODEL_NAME = MODEL_OVERRIDE or META["model"]
+OOF_FILE = f"{MODEL_OVERRIDE}.npz" if MODEL_OVERRIDE else META.get("oof_file", f"{MODEL_NAME}.npz")
+MODEL_PATH = (ROOT / "cache" / "models" / f"{MODEL_OVERRIDE}.joblib") if MODEL_OVERRIDE \
+    else (ROOT / "artifacts" / "model.joblib")
 
 
 def trip_cands(D, t):
@@ -71,7 +79,9 @@ def pre_trip(partition, tid, c):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     TR = dict(np.load(FEAT / "train.npz"))
-    oof = np.load(ROOT / "cache" / "oof" / f"{MODEL_NAME}.npz")["oof"]
+    oof = np.load(ROOT / "cache" / "oof" / OOF_FILE)["oof"]
+    print(f"decoder tuning on OOF file: {OOF_FILE} "
+          f"({'candidate model ' + MODEL_OVERRIDE if MODEL_OVERRIDE else 'deployed model, tuned=' + str(META.get('tuned'))})")
     tr_start = np.r_[0, np.cumsum(TR["trip_n_obs"])[:-1]]
     kept = [t for t in range(len(TR["trip_ids"])) if TR["trip_gate"][t] != "exclude"]
 
@@ -116,9 +126,11 @@ def main():
           f"(classifier-only OOF top1={clf_correct / n_total:.4f})")
     cfg = dict(**params, v_max_mps=V_MAX, cutoff_tol_m=TOL, hard_cap_m=HARD_CAP, relax_cutoff_m=RELAX_CUTOFF,
                backward_tol_m=BACKWARD_TOL, jump_penalty=JUMP_PENALTY, gap_break_s=60.0,
-               tuned_on=f"train OOF {MODEL_NAME} probabilities, 77 gate-kept trips",
+               tuned_on=f"train OOF probabilities ({OOF_FILE}), 77 gate-kept trips",
                created=datetime.now().isoformat(timespec="seconds"))
-    (ROOT / "artifacts" / "decoder_config.json").write_text(json.dumps(cfg, indent=2))
+    (OUT / "decoder_config.json").write_text(json.dumps(cfg, indent=2))
+    if not MODEL_OVERRIDE:          # only the deployed model's decoder config goes to artifacts/
+        (ROOT / "artifacts" / "decoder_config.json").write_text(json.dumps(cfg, indent=2))
 
     fig, axes = plt.subplots(1, len(GRID["reversal_penalty"]), figsize=(13, 3.6), sharey=True)
     for ax, rp in zip(axes, GRID["reversal_penalty"]):
@@ -136,7 +148,8 @@ def main():
     # ---------- 3. student-test: classifier-only vs classifier + HMM ----------
     TE = dict(np.load(FEAT / "student_test.npz"))
     te_start = np.r_[0, np.cumsum(TE["trip_n_obs"])[:-1]]
-    model = joblib.load(ROOT / "artifacts" / "model.joblib")
+    model = joblib.load(MODEL_PATH)
+    print(f"student-test comparison with model file: {MODEL_PATH.relative_to(ROOT)}")
     rows = []
     for t, tid in enumerate(TE["trip_ids"]):
         pdir = data_root() / "student_test"

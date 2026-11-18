@@ -1,0 +1,17 @@
+,trip_macro,pooled
+arc_f1,0.9701167551021598,
+arc_precision,0.9485189738707754,
+arc_recall,0.9937421334914042,
+candidate_miss_rate,0.0037536788937794774,
+direct_transitions,1877.3,
+inference_ms,460.03999999999996,
+multi_hop_transitions,36.3,
+n_obs,1916.0,19160.0
+norm_edit_distance,0.07609319219605733,
+relaxed_transitions,0.4,
+reversal_transitions,0.9,
+route_continuity,0.9958304161503563,
+segment_starts,1.1,
+top1,0.933537007979894,0.9325678496868476
+top1_high_conf,0.961294320023837,
+unmatched_points,0.0,

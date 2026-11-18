@@ -13,5 +13,7 @@ matplotlib==3.11.2
 folium==1.0.0
 joblib==1.6.0
 optuna==5.1.0
+lightgbm==4.7.0
+reportlab==5.1.0      # only for building the report PDF (report/build_report.py)
 fastapi==0.163.2
 uvicorn==0.54.0

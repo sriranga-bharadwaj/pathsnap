@@ -14,14 +14,14 @@
     "dt"
   ],
   "seed": 42,
+  "oof_file": "RandomForest.npz",
   "candidate": {
     "radius": 30.0,
     "k_max": 24,
     "retry_radius": 100.0
   },
-  "selection": "highest student-test observation-level Top-1 (tie-break CV Top-1)",
-  "test_top1": 0.8442066805845512,
-  "cv_top1_mean": 0.840923369351675,
+  "selection": "system-level: highest TRAIN out-of-fold Top-1 after HMM decoding among RandomForest, RandomForest_tuned, LightGBM (results/phase5/final_model_selection.csv)",
+  "train_oof_hmm_top1": 0.9171443667373038,
   "sklearn_version": "1.9.1",
-  "created": "2026-11-18T12:29:39"
+  "created": "2026-11-18T15:15:21"
 }
