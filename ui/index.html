@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PathSnap Evaluator</title>
+  <!-- Leaflet is vendored locally (ui/vendor/leaflet) so the UI works without a CDN -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="side">
+    <h1>PathSnap</h1>
+    <p class="sub">Map-matching evaluator UI (Laptop 2). All predictions come from the API on Laptop 1.</p>
+
+    <section>
+      <label for="apiUrl">API base URL (Laptop 1)</label>
+      <div class="row">
+        <input id="apiUrl" type="text" spellcheck="false">
+        <button id="connectBtn">Connect</button>
+      </div>
+      <div id="apiStatus" class="status">Not connected.</div>
+    </section>
+
+    <section>
+      <h2>Trips <span id="tripCount"></span></h2>
+      <ul id="tripList"></ul>
+    </section>
+
+    <section id="resultBox" hidden>
+      <h2>Result <span id="resultTrip"></span></h2>
+      <table id="metricsTable"></table>
+      <h3>Events</h3>
+      <table id="eventsTable"></table>
+    </section>
+
+    <section>
+      <h2>Legend</h2>
+      <div class="legend">
+        <div><span class="dot" style="background:#2166ac"></span> GPS point (matched)</div>
+        <div><span class="dot" style="background:#f08c00"></span> low confidence (&lt; <span id="lowConf"></span>)</div>
+        <div><span class="dot" style="background:#d62728"></span> fallback (relaxed / unmatched / retry)</div>
+        <div><span class="line" style="background:#1a9850"></span> predicted route</div>
+      </div>
+      <label class="chk"><input id="basemapChk" type="checkbox" checked> show basemap (needs internet)</label>
+      <div id="basemapStatus" class="status small"></div>
+    </section>
+  </aside>
+  <main id="map"></main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
