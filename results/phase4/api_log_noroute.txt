@@ -1,0 +1,18 @@
+﻿Starting PathSnap API on http://0.0.0.0:8000  (DATA_DIR=C:\Users\user\AppData\Local\Temp\claude\943bf96f2b16db8f\a34294e4-85f2-45cc-af5a-0e86861e1ba3\scratchpad\noroute)
+cmd : 13:28:28 INFO model loaded: RandomForest (tuned=False) in 1.0s
+At line:1 char:460
++ ... .bat).Path; cmd /c "`"$bat`" `"$nr`" < NUL" *> results\phase4\api_log ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (13:28:28 INFO m...=False) in 1.0s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+13:28:28 INFO decoder params: {'alpha': 0.1, 'beta': 20.0, 'reversal_penalty': 20.0}
+13:28:28 INFO DATA_DIR = 
+C:\Users\user\AppData\Local\Temp\claude\943bf96f2b16db8f\a34294e4-85f2-45cc-af5a-0e86861e1ba3\scratchpad\noroute  (1 
+trips)
+13:28:37 INFO 127.0.0.1 GET /health -> 200 (3 ms)
+13:28:37 INFO 127.0.0.1 GET /trips -> 200 (2 ms)
+13:28:37 INFO [PREDICT] trip=00000052 status=ok points=262 top1=None continuity=0.9961685823754789 inference=148ms 
+total=152ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 9, 'direct_transitions': 
+252, 'reversal_transitions': 0, 'segment_starts': 1}
+13:28:37 INFO 127.0.0.1 GET /predict/00000052 -> 200 (161 ms)

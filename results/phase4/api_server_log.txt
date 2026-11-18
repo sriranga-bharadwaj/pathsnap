@@ -1,0 +1,59 @@
+﻿.\.venv\Scripts\python.exe : 13:21:27 INFO model loaded: RandomForest (tuned=False) in 0.9s
+At line:1 char:365
++ ... | Out-Null; .\.venv\Scripts\python.exe -m api.main --port 8000 *> res ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (13:21:27 INFO m...=False) in 0.9s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+13:21:27 INFO decoder params: {'alpha': 0.1, 'beta': 20.0, 'reversal_penalty': 20.0}
+13:21:27 INFO DATA_DIR = D:\COLLEGE\ml lab\Hackathaon\Student folder\Student folder\student_test  (10 trips)
+13:21:40 INFO 127.0.0.1 GET /health -> 200 (4 ms)
+13:21:40 INFO 127.0.0.1 GET /trips -> 200 (4 ms)
+13:21:41 INFO [PREDICT] trip=00000000 status=ok points=2503 top1=0.9824210946863764 continuity=0.9992006394884093 
+inference=367ms total=656ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 9, 
+'direct_transitions': 2493, 'reversal_transitions': 0, 'segment_starts': 1}
+13:21:41 INFO 127.0.0.1 GET /predict/00000000 -> 200 (705 ms)
+13:21:41 INFO [PREDICT] trip=00000007 status=ok points=1354 top1=0.9113737075332349 continuity=1.0 inference=145ms 
+total=347ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 2, 'direct_transitions': 
+1349, 'reversal_transitions': 2, 'segment_starts': 1}
+13:21:41 INFO 127.0.0.1 GET /predict/00000007 -> 200 (376 ms)
+13:21:42 INFO [PREDICT] trip=00000009 status=ok points=1049 top1=0.8817921830314586 continuity=0.9914122137404581 
+inference=611ms total=777ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 54, 
+'direct_transitions': 994, 'reversal_transitions': 0, 'segment_starts': 1}
+13:21:42 INFO 127.0.0.1 GET /predict/00000009 -> 200 (809 ms)
+13:21:43 INFO [PREDICT] trip=00000040 status=ok points=2995 top1=0.9796327212020033 continuity=0.9993319973279893 
+inference=386ms total=852ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 15, 
+'direct_transitions': 2974, 'reversal_transitions': 3, 'segment_starts': 1}
+13:21:43 INFO 127.0.0.1 GET /predict/00000040 -> 200 (906 ms)
+13:21:43 INFO [PREDICT] trip=00000052 status=ok points=262 top1=0.9809160305343512 continuity=0.9961685823754789 
+inference=95ms total=124ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 9, 
+'direct_transitions': 252, 'reversal_transitions': 0, 'segment_starts': 1}
+13:21:43 INFO 127.0.0.1 GET /predict/00000052 -> 200 (130 ms)
+13:21:46 INFO [PREDICT] trip=00000056 status=ok points=3958 top1=0.9348155634158666 continuity=0.9951983826130907 
+inference=826ms total=3346ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 131, 
+'direct_transitions': 3823, 'reversal_transitions': 1, 'segment_starts': 1}
+13:21:47 INFO 127.0.0.1 GET /predict/00000056 -> 200 (3504 ms)
+13:21:47 INFO [PREDICT] trip=00000065 status=ok points=768 top1=0.91796875 continuity=0.9973890339425587 
+inference=574ms total=791ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 13, 
+'direct_transitions': 753, 'reversal_transitions': 0, 'segment_starts': 2}
+13:21:47 INFO 127.0.0.1 GET /predict/00000065 -> 200 (820 ms)
+13:21:50 INFO [PREDICT] trip=00000076 status=ok points=1486 top1=0.9515477792732167 continuity=0.9925925925925926 
+inference=2298ms total=2842ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 46, 
+'direct_transitions': 1439, 'reversal_transitions': 0, 'segment_starts': 1}
+13:21:50 INFO 127.0.0.1 GET /predict/00000076 -> 200 (2903 ms)
+13:21:52 INFO [PREDICT] trip=00000077 status=ok points=3911 top1=0.879570442342112 continuity=0.99846547314578 
+inference=1046ms total=1498ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 56, 
+'direct_transitions': 3851, 'reversal_transitions': 3, 'segment_starts': 1}
+13:21:52 INFO 127.0.0.1 GET /predict/00000077 -> 200 (1566 ms)
+13:21:52 INFO [PREDICT] trip=00000091 status=ok points=874 top1=0.9153318077803204 continuity=0.9885452462772051 
+inference=292ms total=400ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 28, 
+'direct_transitions': 845, 'reversal_transitions': 0, 'segment_starts': 1}
+13:21:52 INFO 127.0.0.1 GET /predict/00000091 -> 200 (414 ms)
+13:23:40 INFO 127.0.0.1 GET /health -> 200 (2 ms)
+13:23:40 INFO 127.0.0.1 GET /trips -> 200 (1 ms)
+13:23:50 INFO [PREDICT] trip=00000076 status=ok points=1486 top1=0.9515477792732167 continuity=0.9925925925925926 
+inference=355ms total=593ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 46, 
+'direct_transitions': 1439, 'reversal_transitions': 0, 'segment_starts': 1}
+13:23:50 INFO 127.0.0.1 GET /predict/00000076 -> 200 (628 ms)
+13:24:07 INFO 127.0.0.1 GET /health -> 200 (2 ms)
+13:24:07 INFO 127.0.0.1 GET /trips -> 200 (2 ms)

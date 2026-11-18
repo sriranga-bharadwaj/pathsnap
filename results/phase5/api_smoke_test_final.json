@@ -1,0 +1,297 @@
+{
+  "health": {
+    "status": "ok",
+    "model": "RandomForest",
+    "tuned": false,
+    "data_dir": "D:\\COLLEGE\\ml lab\\Hackathaon\\Student folder\\Student folder\\student_test",
+    "n_trips": 10
+  },
+  "trips": {
+    "data_dir": "D:\\COLLEGE\\ml lab\\Hackathaon\\Student folder\\Student folder\\student_test",
+    "count": 10,
+    "trips": [
+      "00000000",
+      "00000007",
+      "00000009",
+      "00000040",
+      "00000052",
+      "00000056",
+      "00000065",
+      "00000076",
+      "00000077",
+      "00000091"
+    ]
+  },
+  "predict": [
+    {
+      "trip_id": "00000000",
+      "http": 200,
+      "status": "ok",
+      "n_points": 2503,
+      "n_predictions": 2503,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.9824210946863764,
+        "route_continuity": 0.9992006394884093,
+        "candidate_miss_rate": 0.00039952057530967533,
+        "inference_time_ms": 364.5,
+        "total_time_ms": 781.3,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 9,
+        "direct_transitions": 2493,
+        "reversal_transitions": 0,
+        "segment_starts": 1,
+        "low_confidence_points": 173
+      },
+      "client_latency_ms": 867.6,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000007",
+      "http": 200,
+      "status": "ok",
+      "n_points": 1354,
+      "n_predictions": 1354,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.9113737075332349,
+        "route_continuity": 1.0,
+        "candidate_miss_rate": 0.0022156573116691725,
+        "inference_time_ms": 152.4,
+        "total_time_ms": 299.5,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 2,
+        "direct_transitions": 1349,
+        "reversal_transitions": 2,
+        "segment_starts": 1,
+        "low_confidence_points": 104
+      },
+      "client_latency_ms": 354.3,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000009",
+      "http": 200,
+      "status": "ok",
+      "n_points": 1049,
+      "n_predictions": 1049,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.8817921830314586,
+        "route_continuity": 0.9914122137404581,
+        "candidate_miss_rate": 0.025738798856053346,
+        "inference_time_ms": 577.1,
+        "total_time_ms": 744.4,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 54,
+        "direct_transitions": 994,
+        "reversal_transitions": 0,
+        "segment_starts": 1,
+        "low_confidence_points": 155
+      },
+      "client_latency_ms": 792.4,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000040",
+      "http": 200,
+      "status": "ok",
+      "n_points": 2995,
+      "n_predictions": 2995,
+      "route_pieces": 3,
+      "metrics": {
+        "top1_accuracy": 0.9796327212020033,
+        "route_continuity": 0.9993319973279893,
+        "candidate_miss_rate": 0.00033388981636062187,
+        "inference_time_ms": 373.9,
+        "total_time_ms": 851.3,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 2,
+        "multi_hop_transitions": 15,
+        "direct_transitions": 2974,
+        "reversal_transitions": 3,
+        "segment_starts": 1,
+        "low_confidence_points": 292
+      },
+      "client_latency_ms": 922.9,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000052",
+      "http": 200,
+      "status": "ok",
+      "n_points": 262,
+      "n_predictions": 262,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.9809160305343512,
+        "route_continuity": 0.9961685823754789,
+        "candidate_miss_rate": 0.0,
+        "inference_time_ms": 98.1,
+        "total_time_ms": 123.6,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 9,
+        "direct_transitions": 252,
+        "reversal_transitions": 0,
+        "segment_starts": 1,
+        "low_confidence_points": 15
+      },
+      "client_latency_ms": 132.7,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000056",
+      "http": 200,
+      "status": "ok",
+      "n_points": 3958,
+      "n_predictions": 3958,
+      "route_pieces": 3,
+      "metrics": {
+        "top1_accuracy": 0.9348155634158666,
+        "route_continuity": 0.9951983826130907,
+        "candidate_miss_rate": 0.008337544214249593,
+        "inference_time_ms": 797.3,
+        "total_time_ms": 1654.0,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 2,
+        "multi_hop_transitions": 131,
+        "direct_transitions": 3823,
+        "reversal_transitions": 1,
+        "segment_starts": 1,
+        "low_confidence_points": 505
+      },
+      "client_latency_ms": 1764.5,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000065",
+      "http": 200,
+      "status": "ok",
+      "n_points": 768,
+      "n_predictions": 768,
+      "route_pieces": 2,
+      "metrics": {
+        "top1_accuracy": 0.91796875,
+        "route_continuity": 0.9973890339425587,
+        "candidate_miss_rate": 0.0,
+        "inference_time_ms": 273.7,
+        "total_time_ms": 386.9,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 13,
+        "direct_transitions": 753,
+        "reversal_transitions": 0,
+        "segment_starts": 2,
+        "low_confidence_points": 124
+      },
+      "client_latency_ms": 425.3,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000076",
+      "http": 200,
+      "status": "ok",
+      "n_points": 1486,
+      "n_predictions": 1486,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.9515477792732167,
+        "route_continuity": 0.9925925925925926,
+        "candidate_miss_rate": 0.0,
+        "inference_time_ms": 1417.5,
+        "total_time_ms": 1672.8,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 46,
+        "direct_transitions": 1439,
+        "reversal_transitions": 0,
+        "segment_starts": 1,
+        "low_confidence_points": 267
+      },
+      "client_latency_ms": 1728.3,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000077",
+      "http": 200,
+      "status": "ok",
+      "n_points": 3911,
+      "n_predictions": 3911,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.879570442342112,
+        "route_continuity": 0.99846547314578,
+        "candidate_miss_rate": 0.0005113781641523651,
+        "inference_time_ms": 752.6,
+        "total_time_ms": 1335.7,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 56,
+        "direct_transitions": 3851,
+        "reversal_transitions": 3,
+        "segment_starts": 1,
+        "low_confidence_points": 1441
+      },
+      "client_latency_ms": 1433.2,
+      "reference_keys_in_response": false
+    },
+    {
+      "trip_id": "00000091",
+      "http": 200,
+      "status": "ok",
+      "n_points": 874,
+      "n_predictions": 874,
+      "route_pieces": 1,
+      "metrics": {
+        "top1_accuracy": 0.9153318077803204,
+        "route_continuity": 0.9885452462772051,
+        "candidate_miss_rate": 0.0,
+        "inference_time_ms": 259.8,
+        "total_time_ms": 406.7,
+        "reference_available": true
+      },
+      "events": {
+        "unmatched_points": 0,
+        "relaxed_transitions": 0,
+        "multi_hop_transitions": 28,
+        "direct_transitions": 845,
+        "reversal_transitions": 0,
+        "segment_starts": 1,
+        "low_confidence_points": 161
+      },
+      "client_latency_ms": 435.8,
+      "reference_keys_in_response": false
+    }
+  ]
+}

@@ -71,19 +71,33 @@ Response contract of `/predict/{trip_id}`:
 {
   "trip_id": "00000007",
   "status": "ok",
+  "model": "RandomForest",
   "gps_points": [[lat, lon], ...],
   "predictions": [{"observation_index": 0, "arc_id": 1234, "confidence": 0.93,
-                   "margin": 0.71, "transition_type": "direct|multi_hop|relaxed|start|unmatched",
+                   "margin": 0.71,
+                   "transition_type": "start|direct|multi_hop|reversal|relaxed|unmatched",
                    "fallback": false}, ...],
-  "route_geometry": [[lat, lon], ...],
-  "metrics": {"top1_accuracy": 0.91, "route_continuity": 0.98,
-              "candidate_miss_rate": 0.01, "inference_time_ms": 850},
-  "events": {"unmatched_points": 0, "relaxed_transitions": 2, "multi_hop_transitions": 40}
+  "route_geometry": [[[lat, lon], ...], ...],
+  "metrics": {"top1_accuracy": 0.91, "route_continuity": 0.98, "candidate_miss_rate": 0.01,
+              "inference_time_ms": 850, "total_time_ms": 900, "reference_available": true},
+  "events": {"unmatched_points": 0, "relaxed_transitions": 2, "multi_hop_transitions": 40,
+             "direct_transitions": 1300, "reversal_transitions": 1, "segment_starts": 1,
+             "low_confidence_points": 120}
 }
 ```
-(Values above are a format example only, not results.) `transition_type` = `start` marks the
-first point of a segment (trip start or restart after a gap > 60 s); it has no incoming
-transition. Every request is logged to the
+(Values above are a format example only, not results.) Notes on the contract:
+- `route_geometry` is a **list of polylines**: the route is split where the decoder restarts
+  (gap > 60 s) or had to take a relaxed jump, so no false straight line is drawn across a gap.
+- `transition_type`: `start` = first point of a segment (no incoming transition);
+  `reversal` = U-turn onto the reverse twin of the same road (penalised).
+- `fallback` = relaxed transition, unmatched point, or candidates found only by the wider retry.
+- `confidence` = classifier probability normalised over the point's candidates; `margin` = that
+  minus the best other candidate (negative when the HMM overrides the classifier).
+- Extra fields beyond the minimum contract: `model`, `total_time_ms`, `reference_available`
+  and the additional event counts. If there is no `.route`, `top1_accuracy` and
+  `candidate_miss_rate` are `null`.
+
+Every request is logged to the
 console: trip_id, status, latency.
 
 ## Two-laptop flow
