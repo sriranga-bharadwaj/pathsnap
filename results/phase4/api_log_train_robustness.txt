@@ -1,0 +1,332 @@
+﻿Starting PathSnap API on http://0.0.0.0:8000  (DATA_DIR=D:\COLLEGE\ml lab\Hackathaon\Student folder\Student folder\train)
+cmd : 13:29:16 INFO model loaded: RandomForest (tuned=False) in 1.1s
+At line:1 char:403
++ ... ain").Path; cmd /c "`"$bat`" `"$tr`" < NUL" *> results\phase4\api_log ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (13:29:16 INFO m...=False) in 1.1s:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+13:29:16 INFO decoder params: {'alpha': 0.1, 'beta': 20.0, 'reversal_penalty': 20.0}
+13:29:16 INFO DATA_DIR = D:\COLLEGE\ml lab\Hackathaon\Student folder\Student folder\train  (80 trips)
+13:29:24 INFO 127.0.0.1 GET /health -> 200 (7 ms)
+13:29:24 INFO 127.0.0.1 GET /trips -> 200 (11 ms)
+13:29:26 INFO [PREDICT] trip=00000001 status=ok points=1315 top1=0.9885931558935361 continuity=0.9946727549467276 
+inference=948ms total=1278ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 51, 
+'direct_transitions': 1263, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:26 INFO 127.0.0.1 GET /predict/00000001 -> 200 (1367 ms)
+13:29:29 INFO [PREDICT] trip=00000002 status=ok points=7243 top1=0.7669473974872291 continuity=0.9936826992103374 
+inference=2047ms total=2901ms events={'unmatched_points': 271, 'relaxed_transitions': 3, 'multi_hop_transitions': 209, 
+'direct_transitions': 6753, 'reversal_transitions': 1, 'segment_starts': 6}
+13:29:29 INFO 127.0.0.1 GET /predict/00000002 -> 200 (3012 ms)
+13:29:29 INFO [PREDICT] trip=00000003 status=ok points=821 top1=0.9354445797807551 continuity=0.998780487804878 
+inference=283ms total=445ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 13, 
+'direct_transitions': 807, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:29 INFO 127.0.0.1 GET /predict/00000003 -> 200 (460 ms)
+13:29:30 INFO [PREDICT] trip=00000004 status=ok points=1064 top1=0.9210526315789473 continuity=0.9783631232361242 
+inference=415ms total=562ms events={'unmatched_points': 0, 'relaxed_transitions': 6, 'multi_hop_transitions': 63, 
+'direct_transitions': 991, 'reversal_transitions': 3, 'segment_starts': 1}
+13:29:30 INFO 127.0.0.1 GET /predict/00000004 -> 200 (583 ms)
+13:29:30 INFO [PREDICT] trip=00000005 status=ok points=1045 top1=0.9732057416267943 continuity=1.0 inference=140ms 
+total=276ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 0, 'direct_transitions': 
+1044, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:30 INFO 127.0.0.1 GET /predict/00000005 -> 200 (306 ms)
+13:29:31 INFO [PREDICT] trip=00000006 status=ok points=1450 top1=0.9510344827586207 continuity=1.0 inference=356ms 
+total=619ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 28, 
+'direct_transitions': 1418, 'reversal_transitions': 0, 'segment_starts': 4}
+13:29:31 INFO 127.0.0.1 GET /predict/00000006 -> 200 (653 ms)
+13:29:32 INFO [PREDICT] trip=00000008 status=ok points=3093 top1=0.8102166181700614 continuity=0.9954721862871928 
+inference=570ms total=1020ms events={'unmatched_points': 0, 'relaxed_transitions': 7, 'multi_hop_transitions': 40, 
+'direct_transitions': 3034, 'reversal_transitions': 11, 'segment_starts': 1}
+13:29:32 INFO 127.0.0.1 GET /predict/00000008 -> 200 (1095 ms)
+13:29:33 INFO [PREDICT] trip=00000010 status=ok points=2711 top1=0.7934341571375876 continuity=0.9977859778597786 
+inference=695ms total=1036ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 14, 
+'direct_transitions': 2695, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:33 INFO 127.0.0.1 GET /predict/00000010 -> 200 (1088 ms)
+13:29:34 INFO [PREDICT] trip=00000011 status=ok points=2828 top1=0.9886845827439887 continuity=1.0 inference=469ms 
+total=1008ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 22, 
+'direct_transitions': 2804, 'reversal_transitions': 0, 'segment_starts': 2}
+13:29:34 INFO 127.0.0.1 GET /predict/00000011 -> 200 (1072 ms)
+13:29:35 INFO [PREDICT] trip=00000012 status=ok points=1608 top1=0.9931592039800995 continuity=0.9975108898568762 
+inference=410ms total=610ms events={'unmatched_points': 0, 'relaxed_transitions': 4, 'multi_hop_transitions': 4, 
+'direct_transitions': 1599, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:35 INFO 127.0.0.1 GET /predict/00000012 -> 200 (636 ms)
+13:29:38 INFO [PREDICT] trip=00000013 status=ok points=2580 top1=0.9775193798449613 continuity=0.9941837921675067 
+inference=1626ms total=2560ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 57, 
+'direct_transitions': 2522, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:38 INFO 127.0.0.1 GET /predict/00000013 -> 200 (2601 ms)
+13:29:38 INFO [PREDICT] trip=00000014 status=ok points=448 top1=0.9174107142857143 continuity=0.9865470852017937 
+inference=226ms total=292ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 23, 
+'direct_transitions': 423, 'reversal_transitions': 0, 'segment_starts': 2}
+13:29:38 INFO 127.0.0.1 GET /predict/00000014 -> 200 (301 ms)
+13:29:39 INFO [PREDICT] trip=00000016 status=ok points=1305 top1=0.7701149425287356 continuity=0.9961656441717791 
+inference=485ms total=694ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 26, 
+'direct_transitions': 1276, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:39 INFO 127.0.0.1 GET /predict/00000016 -> 200 (719 ms)
+13:29:39 INFO [PREDICT] trip=00000018 status=ok points=379 top1=0.9630606860158312 continuity=0.9761904761904762 
+inference=237ms total=295ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 28, 
+'direct_transitions': 348, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:39 INFO 127.0.0.1 GET /predict/00000018 -> 200 (305 ms)
+13:29:40 INFO [PREDICT] trip=00000019 status=ok points=2354 top1=0.9362786745964317 continuity=0.9957501062473438 
+inference=925ms total=1368ms events={'unmatched_points': 0, 'relaxed_transitions': 4, 'multi_hop_transitions': 33, 
+'direct_transitions': 2314, 'reversal_transitions': 2, 'segment_starts': 1}
+13:29:41 INFO 127.0.0.1 GET /predict/00000019 -> 200 (1405 ms)
+13:29:41 INFO [PREDICT] trip=00000020 status=ok points=2353 top1=0.9749256268593285 continuity=1.0 inference=231ms 
+total=518ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 5, 'direct_transitions': 
+2346, 'reversal_transitions': 1, 'segment_starts': 1}
+13:29:41 INFO 127.0.0.1 GET /predict/00000020 -> 200 (622 ms)
+13:29:45 INFO [PREDICT] trip=00000021 status=ok points=15783 top1=0.9284039789647088 continuity=1.0 inference=1234ms 
+total=3412ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 29, 
+'direct_transitions': 15693, 'reversal_transitions': 58, 'segment_starts': 3}
+13:29:45 INFO 127.0.0.1 GET /predict/00000021 -> 200 (3699 ms)
+13:29:46 INFO [PREDICT] trip=00000022 status=ok points=474 top1=0.9345991561181435 continuity=0.9534883720930233 
+inference=363ms total=481ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 83, 
+'direct_transitions': 390, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:46 INFO 127.0.0.1 GET /predict/00000022 -> 200 (490 ms)
+13:29:46 INFO [PREDICT] trip=00000024 status=ok points=801 top1=0.9887640449438202 continuity=1.0 inference=241ms 
+total=343ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 11, 
+'direct_transitions': 787, 'reversal_transitions': 0, 'segment_starts': 3}
+13:29:46 INFO 127.0.0.1 GET /predict/00000024 -> 200 (357 ms)
+13:29:47 INFO [PREDICT] trip=00000025 status=ok points=1179 top1=0.9720101781170484 continuity=0.99830220713073 
+inference=552ms total=741ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 15, 
+'direct_transitions': 1162, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:47 INFO 127.0.0.1 GET /predict/00000025 -> 200 (769 ms)
+13:29:47 INFO [PREDICT] trip=00000026 status=ok points=361 top1=0.9279778393351801 continuity=0.9583333333333334 
+inference=155ms total=209ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 28, 
+'direct_transitions': 332, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:47 INFO 127.0.0.1 GET /predict/00000026 -> 200 (222 ms)
+13:29:47 INFO [PREDICT] trip=00000027 status=ok points=694 top1=0.978386167146974 continuity=0.9985569985569985 
+inference=198ms total=289ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 3, 
+'direct_transitions': 690, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:47 INFO 127.0.0.1 GET /predict/00000027 -> 200 (303 ms)
+13:29:49 INFO [PREDICT] trip=00000028 status=ok points=3565 top1=0.9758765778401122 continuity=0.998595900028082 
+inference=1014ms total=1663ms events={'unmatched_points': 0, 'relaxed_transitions': 4, 'multi_hop_transitions': 21, 
+'direct_transitions': 3535, 'reversal_transitions': 1, 'segment_starts': 4}
+13:29:49 INFO 127.0.0.1 GET /predict/00000028 -> 200 (1802 ms)
+13:29:50 INFO [PREDICT] trip=00000029 status=ok points=733 top1=0.9836289222373806 continuity=0.9959016393442623 
+inference=268ms total=363ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 20, 
+'direct_transitions': 712, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:50 INFO 127.0.0.1 GET /predict/00000029 -> 200 (376 ms)
+13:29:51 INFO [PREDICT] trip=00000031 status=ok points=4245 top1=0.9839811542991755 continuity=0.9995287464655985 
+inference=1144ms total=1811ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 20, 
+'direct_transitions': 4222, 'reversal_transitions': 1, 'segment_starts': 1}
+13:29:51 INFO 127.0.0.1 GET /predict/00000031 -> 200 (1874 ms)
+13:29:53 INFO [PREDICT] trip=00000032 status=ok points=2464 top1=0.9650974025974026 continuity=0.9963459196102314 
+inference=1262ms total=1877ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 69, 
+'direct_transitions': 2392, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:53 INFO 127.0.0.1 GET /predict/00000032 -> 200 (1917 ms)
+13:29:55 INFO [PREDICT] trip=00000033 status=ok points=5844 top1=0.23767967145790556 continuity=0.9977751155228478 
+inference=873ms total=1505ms events={'unmatched_points': 0, 'relaxed_transitions': 6, 'multi_hop_transitions': 54, 
+'direct_transitions': 5783, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:55 INFO 127.0.0.1 GET /predict/00000033 -> 200 (1597 ms)
+13:29:56 INFO [PREDICT] trip=00000034 status=ok points=3614 top1=0.9640287769784173 continuity=0.9986161084970938 
+inference=615ms total=1217ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 22, 
+'direct_transitions': 3591, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:56 INFO 127.0.0.1 GET /predict/00000034 -> 200 (1275 ms)
+13:29:57 INFO [PREDICT] trip=00000035 status=ok points=1643 top1=0.8746195982958004 continuity=0.9987819732034104 
+inference=717ms total=973ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 43, 
+'direct_transitions': 1599, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:57 INFO 127.0.0.1 GET /predict/00000035 -> 200 (1003 ms)
+13:29:58 INFO [PREDICT] trip=00000036 status=ok points=1368 top1=0.9634502923976608 continuity=0.9963423555230432 
+inference=390ms total=575ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 30, 
+'direct_transitions': 1334, 'reversal_transitions': 3, 'segment_starts': 1}
+13:29:58 INFO 127.0.0.1 GET /predict/00000036 -> 200 (609 ms)
+13:29:59 INFO [PREDICT] trip=00000037 status=ok points=677 top1=0.9867060561299852 continuity=1.0 inference=344ms 
+total=418ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 11, 
+'direct_transitions': 665, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:59 INFO 127.0.0.1 GET /predict/00000037 -> 200 (437 ms)
+13:29:59 INFO [PREDICT] trip=00000038 status=ok points=1287 top1=0.9766899766899767 continuity=0.9992223950233281 
+inference=384ms total=624ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 18, 
+'direct_transitions': 1268, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:59 INFO 127.0.0.1 GET /predict/00000038 -> 200 (651 ms)
+13:29:59 INFO [PREDICT] trip=00000039 status=ok points=363 top1=0.9421487603305785 continuity=0.9917127071823204 
+inference=110ms total=153ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 16, 
+'direct_transitions': 346, 'reversal_transitions': 0, 'segment_starts': 1}
+13:29:59 INFO 127.0.0.1 GET /predict/00000039 -> 200 (161 ms)
+13:30:00 INFO [PREDICT] trip=00000041 status=ok points=1019 top1=0.9528949950932286 continuity=0.9882005899705014 
+inference=358ms total=525ms events={'unmatched_points': 0, 'relaxed_transitions': 4, 'multi_hop_transitions': 37, 
+'direct_transitions': 976, 'reversal_transitions': 0, 'segment_starts': 2}
+13:30:00 INFO 127.0.0.1 GET /predict/00000041 -> 200 (553 ms)
+13:30:04 INFO [PREDICT] trip=00000042 status=ok points=7739 top1=0.9717017702545548 continuity=0.9997409661960885 
+inference=1912ms total=4222ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 59, 
+'direct_transitions': 7662, 'reversal_transitions': 0, 'segment_starts': 18}
+13:30:04 INFO 127.0.0.1 GET /predict/00000042 -> 200 (4362 ms)
+13:30:09 INFO [PREDICT] trip=00000043 status=ok points=2322 top1=0.73557278208441 continuity=0.9522569444444444 
+inference=3548ms total=4023ms events={'unmatched_points': 14, 'relaxed_transitions': 121, 'multi_hop_transitions': 56, 
+'direct_transitions': 2128, 'reversal_transitions': 0, 'segment_starts': 3}
+13:30:09 INFO 127.0.0.1 GET /predict/00000043 -> 200 (4069 ms)
+13:30:09 INFO [PREDICT] trip=00000044 status=ok points=546 top1=0.9853479853479854 continuity=1.0 inference=155ms 
+total=227ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 7, 'direct_transitions': 
+537, 'reversal_transitions': 0, 'segment_starts': 2}
+13:30:09 INFO 127.0.0.1 GET /predict/00000044 -> 200 (241 ms)
+13:30:09 INFO [PREDICT] trip=00000045 status=ok points=640 top1=0.9453125 continuity=0.9968701095461658 
+inference=140ms total=212ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 4, 
+'direct_transitions': 634, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:09 INFO 127.0.0.1 GET /predict/00000045 -> 200 (224 ms)
+13:30:10 INFO [PREDICT] trip=00000046 status=ok points=1401 top1=0.9593147751605996 continuity=1.0 inference=250ms 
+total=411ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 8, 'direct_transitions': 
+1388, 'reversal_transitions': 4, 'segment_starts': 1}
+13:30:10 INFO 127.0.0.1 GET /predict/00000046 -> 200 (438 ms)
+13:30:10 INFO [PREDICT] trip=00000047 status=ok points=1272 top1=0.9363207547169812 continuity=0.999213217938631 
+inference=552ms total=793ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 8, 
+'direct_transitions': 1263, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:10 INFO 127.0.0.1 GET /predict/00000047 -> 200 (813 ms)
+13:30:11 INFO [PREDICT] trip=00000048 status=ok points=1240 top1=0.9669354838709677 continuity=0.9967715899919289 
+inference=236ms total=394ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 22, 
+'direct_transitions': 1217, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:11 INFO 127.0.0.1 GET /predict/00000048 -> 200 (418 ms)
+13:30:11 INFO [PREDICT] trip=00000050 status=ok points=518 top1=0.9575289575289575 continuity=1.0 inference=128ms 
+total=191ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 3, 'direct_transitions': 
+514, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:11 INFO 127.0.0.1 GET /predict/00000050 -> 200 (201 ms)
+13:30:12 INFO [PREDICT] trip=00000051 status=ok points=984 top1=0.9217479674796748 continuity=0.9969481180061037 
+inference=290ms total=427ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 28, 
+'direct_transitions': 955, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:12 INFO 127.0.0.1 GET /predict/00000051 -> 200 (457 ms)
+13:30:13 INFO [PREDICT] trip=00000053 status=ok points=1304 top1=0.9562883435582822 continuity=0.9746738296239448 
+inference=1001ms total=1480ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 120, 
+'direct_transitions': 1183, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:13 INFO 127.0.0.1 GET /predict/00000053 -> 200 (1507 ms)
+13:30:20 INFO [PREDICT] trip=00000054 status=ok points=19313 top1=0.08724693211826232 continuity=0.9801294680551647 
+inference=3924ms total=6637ms events={'unmatched_points': 1106, 'relaxed_transitions': 334, 'multi_hop_transitions': 
+352, 'direct_transitions': 17516, 'reversal_transitions': 3, 'segment_starts': 2}
+13:30:20 INFO 127.0.0.1 GET /predict/00000054 -> 200 (6987 ms)
+13:30:22 INFO [PREDICT] trip=00000055 status=ok points=2472 top1=0.9967637540453075 continuity=0.9991902834008097 
+inference=1026ms total=1471ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 9, 
+'direct_transitions': 2461, 'reversal_transitions': 0, 'segment_starts': 2}
+13:30:22 INFO 127.0.0.1 GET /predict/00000055 -> 200 (1512 ms)
+13:30:23 INFO [PREDICT] trip=00000057 status=ok points=1645 top1=0.9689969604863222 continuity=1.0 inference=334ms 
+total=677ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 20, 
+'direct_transitions': 1624, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:23 INFO 127.0.0.1 GET /predict/00000057 -> 200 (717 ms)
+13:30:24 INFO [PREDICT] trip=00000058 status=ok points=599 top1=0.9298831385642737 continuity=0.9581939799331104 
+inference=920ms total=1004ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 70, 
+'direct_transitions': 528, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:24 INFO 127.0.0.1 GET /predict/00000058 -> 200 (1016 ms)
+13:30:24 INFO [PREDICT] trip=00000060 status=ok points=854 top1=0.9519906323185011 continuity=0.9706916764361079 
+inference=585ms total=734ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 98, 
+'direct_transitions': 755, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:24 INFO 127.0.0.1 GET /predict/00000060 -> 200 (759 ms)
+13:30:25 INFO [PREDICT] trip=00000061 status=ok points=1430 top1=0.7734265734265734 continuity=0.9769069279216235 
+inference=729ms total=915ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 136, 
+'direct_transitions': 1291, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:25 INFO 127.0.0.1 GET /predict/00000061 -> 200 (943 ms)
+13:30:27 INFO [PREDICT] trip=00000062 status=ok points=3378 top1=0.970396684428656 continuity=0.9997038791827065 
+inference=896ms total=1425ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 24, 
+'direct_transitions': 3353, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:27 INFO 127.0.0.1 GET /predict/00000062 -> 200 (1477 ms)
+13:30:28 INFO [PREDICT] trip=00000063 status=ok points=2781 top1=0.948220064724919 continuity=0.9964028776978417 
+inference=449ms total=923ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 62, 
+'direct_transitions': 2718, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:28 INFO 127.0.0.1 GET /predict/00000063 -> 200 (966 ms)
+13:30:29 INFO [PREDICT] trip=00000064 status=ok points=2093 top1=0.9784997611084567 continuity=0.998565965583174 
+inference=528ms total=952ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 64, 
+'direct_transitions': 2028, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:29 INFO 127.0.0.1 GET /predict/00000064 -> 200 (997 ms)
+13:30:30 INFO [PREDICT] trip=00000066 status=ok points=4325 top1=0.913757225433526 continuity=1.0 inference=336ms 
+total=847ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 3, 'direct_transitions': 
+4318, 'reversal_transitions': 3, 'segment_starts': 1}
+13:30:30 INFO 127.0.0.1 GET /predict/00000066 -> 200 (913 ms)
+13:30:30 INFO [PREDICT] trip=00000068 status=ok points=747 top1=0.9531459170013387 continuity=0.9986595174262735 
+inference=180ms total=261ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 18, 
+'direct_transitions': 727, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:30 INFO 127.0.0.1 GET /predict/00000068 -> 200 (327 ms)
+13:30:31 INFO [PREDICT] trip=00000069 status=ok points=2067 top1=0.8935655539429125 continuity=0.997093023255814 
+inference=484ms total=782ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 49, 
+'direct_transitions': 2014, 'reversal_transitions': 1, 'segment_starts': 3}
+13:30:31 INFO 127.0.0.1 GET /predict/00000069 -> 200 (814 ms)
+13:30:32 INFO [PREDICT] trip=00000070 status=ok points=2076 top1=0.9315992292870906 continuity=0.9990356798457087 
+inference=354ms total=586ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 21, 
+'direct_transitions': 2051, 'reversal_transitions': 2, 'segment_starts': 2}
+13:30:32 INFO 127.0.0.1 GET /predict/00000070 -> 200 (618 ms)
+13:30:32 INFO [PREDICT] trip=00000071 status=ok points=850 top1=0.9811764705882353 continuity=0.9964664310954063 
+inference=195ms total=373ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 11, 
+'direct_transitions': 836, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:32 INFO 127.0.0.1 GET /predict/00000071 -> 200 (388 ms)
+13:30:33 INFO [PREDICT] trip=00000072 status=ok points=969 top1=0.739938080495356 continuity=0.8481404958677686 
+inference=354ms total=451ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 210, 
+'direct_transitions': 758, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:33 INFO 127.0.0.1 GET /predict/00000072 -> 200 (469 ms)
+13:30:34 INFO [PREDICT] trip=00000074 status=ok points=1929 top1=0.8693623639191291 continuity=0.995850622406639 
+inference=589ms total=858ms events={'unmatched_points': 0, 'relaxed_transitions': 6, 'multi_hop_transitions': 14, 
+'direct_transitions': 1908, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:34 INFO 127.0.0.1 GET /predict/00000074 -> 200 (887 ms)
+13:30:34 INFO [PREDICT] trip=00000075 status=ok points=1628 top1=0.8642506142506142 continuity=0.9981561155500922 
+inference=239ms total=406ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 18, 
+'direct_transitions': 1605, 'reversal_transitions': 2, 'segment_starts': 1}
+13:30:34 INFO 127.0.0.1 GET /predict/00000075 -> 200 (434 ms)
+13:30:36 INFO [PREDICT] trip=00000078 status=ok points=2909 top1=0.9491234101065659 continuity=0.9810801513587891 
+inference=1377ms total=2342ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 235, 
+'direct_transitions': 2671, 'reversal_transitions': 0, 'segment_starts': 2}
+13:30:36 INFO 127.0.0.1 GET /predict/00000078 -> 200 (2393 ms)
+13:30:37 INFO [PREDICT] trip=00000079 status=ok points=689 top1=0.8505079825834543 continuity=0.9927325581395349 
+inference=428ms total=535ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 31, 
+'direct_transitions': 656, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:37 INFO 127.0.0.1 GET /predict/00000079 -> 200 (547 ms)
+13:30:38 INFO [PREDICT] trip=00000080 status=ok points=2510 top1=0.9302788844621513 continuity=0.9944200876843364 
+inference=444ms total=724ms events={'unmatched_points': 0, 'relaxed_transitions': 14, 'multi_hop_transitions': 15, 
+'direct_transitions': 2480, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:38 INFO 127.0.0.1 GET /predict/00000080 -> 200 (773 ms)
+13:30:39 INFO [PREDICT] trip=00000081 status=ok points=3224 top1=0.8889578163771712 continuity=0.9940420194418313 
+inference=499ms total=1015ms events={'unmatched_points': 13, 'relaxed_transitions': 6, 'multi_hop_transitions': 77, 
+'direct_transitions': 3111, 'reversal_transitions': 1, 'segment_starts': 16}
+13:30:39 INFO 127.0.0.1 GET /predict/00000081 -> 200 (1070 ms)
+13:30:40 INFO [PREDICT] trip=00000082 status=ok points=4268 top1=0.8322399250234301 continuity=0.9981251464729318 
+inference=546ms total=1096ms events={'unmatched_points': 0, 'relaxed_transitions': 10, 'multi_hop_transitions': 13, 
+'direct_transitions': 4244, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:40 INFO 127.0.0.1 GET /predict/00000082 -> 200 (1162 ms)
+13:30:41 INFO [PREDICT] trip=00000083 status=ok points=1507 top1=0.8792302587923025 continuity=0.99867197875166 
+inference=387ms total=537ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 10, 
+'direct_transitions': 1495, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:41 INFO 127.0.0.1 GET /predict/00000083 -> 200 (561 ms)
+13:30:45 INFO [PREDICT] trip=00000084 status=ok points=16031 top1=0.8900255754475703 continuity=0.9995632097841008 
+inference=1768ms total=4404ms events={'unmatched_points': 1, 'relaxed_transitions': 1, 'multi_hop_transitions': 94, 
+'direct_transitions': 15884, 'reversal_transitions': 48, 'segment_starts': 3}
+13:30:45 INFO 127.0.0.1 GET /predict/00000084 -> 200 (4634 ms)
+13:30:46 INFO [PREDICT] trip=00000085 status=ok points=1092 top1=0.9432234432234432 continuity=0.9990825688073395 
+inference=203ms total=311ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 10, 
+'direct_transitions': 1079, 'reversal_transitions': 1, 'segment_starts': 2}
+13:30:46 INFO 127.0.0.1 GET /predict/00000085 -> 200 (331 ms)
+13:30:48 INFO [PREDICT] trip=00000086 status=ok points=4143 top1=0.9908279024861212 continuity=0.9995171414775471 
+inference=1225ms total=2013ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 13, 
+'direct_transitions': 4127, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:48 INFO 127.0.0.1 GET /predict/00000086 -> 200 (2081 ms)
+13:30:49 INFO [PREDICT] trip=00000088 status=ok points=876 top1=0.9531963470319634 continuity=1.0 inference=769ms 
+total=855ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 9, 'direct_transitions': 
+864, 'reversal_transitions': 0, 'segment_starts': 3}
+13:30:49 INFO 127.0.0.1 GET /predict/00000088 -> 200 (869 ms)
+13:30:50 INFO [PREDICT] trip=00000089 status=ok points=1228 top1=0.9193811074918566 continuity=0.9869174161896974 
+inference=1023ms total=1212ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 50, 
+'direct_transitions': 1173, 'reversal_transitions': 0, 'segment_starts': 5}
+13:30:50 INFO 127.0.0.1 GET /predict/00000089 -> 200 (1232 ms)
+13:30:51 INFO [PREDICT] trip=00000090 status=ok points=536 top1=0.960820895522388 continuity=0.9943820224719101 
+inference=256ms total=320ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 32, 
+'direct_transitions': 502, 'reversal_transitions': 0, 'segment_starts': 2}
+13:30:51 INFO 127.0.0.1 GET /predict/00000090 -> 200 (329 ms)
+13:30:55 INFO [PREDICT] trip=00000092 status=ok points=7892 top1=0.9336036492650786 continuity=0.9968318337346344 
+inference=1558ms total=4493ms events={'unmatched_points': 0, 'relaxed_transitions': 1, 'multi_hop_transitions': 191, 
+'direct_transitions': 7699, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:55 INFO 127.0.0.1 GET /predict/00000092 -> 200 (4617 ms)
+13:30:56 INFO [PREDICT] trip=00000093 status=ok points=1211 top1=0.8554913294797688 continuity=0.9619834710743802 
+inference=748ms total=967ms events={'unmatched_points': 0, 'relaxed_transitions': 3, 'multi_hop_transitions': 121, 
+'direct_transitions': 1086, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:56 INFO 127.0.0.1 GET /predict/00000093 -> 200 (988 ms)
+13:30:57 INFO [PREDICT] trip=00000095 status=ok points=1551 top1=0.90715667311412 continuity=0.9929032258064516 
+inference=335ms total=562ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 49, 
+'direct_transitions': 1501, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:57 INFO 127.0.0.1 GET /predict/00000095 -> 200 (590 ms)
+13:30:58 INFO [PREDICT] trip=00000096 status=ok points=3271 top1=0.8446958116783858 continuity=0.9981578139392079 
+inference=495ms total=953ms events={'unmatched_points': 10, 'relaxed_transitions': 2, 'multi_hop_transitions': 30, 
+'direct_transitions': 3228, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:58 INFO 127.0.0.1 GET /predict/00000096 -> 200 (1071 ms)
+13:30:59 INFO [PREDICT] trip=00000097 status=ok points=1740 top1=0.9706896551724138 continuity=0.9994249568717654 
+inference=363ms total=602ms events={'unmatched_points': 0, 'relaxed_transitions': 0, 'multi_hop_transitions': 23, 
+'direct_transitions': 1716, 'reversal_transitions': 0, 'segment_starts': 1}
+13:30:59 INFO 127.0.0.1 GET /predict/00000097 -> 200 (699 ms)
+13:31:01 INFO [PREDICT] trip=00000098 status=ok points=5584 top1=0.9797636103151862 continuity=0.9991044241447251 
+inference=816ms total=2032ms events={'unmatched_points': 0, 'relaxed_transitions': 2, 'multi_hop_transitions': 29, 
+'direct_transitions': 5551, 'reversal_transitions': 1, 'segment_starts': 1}
+13:31:01 INFO 127.0.0.1 GET /predict/00000098 -> 200 (2131 ms)
+13:31:02 INFO [PREDICT] trip=00000099 status=ok points=2322 top1=0.9056847545219638 continuity=0.994823123382226 
+inference=856ms total=1337ms events={'unmatched_points': 2, 'relaxed_transitions': 2, 'multi_hop_transitions': 69, 
+'direct_transitions': 2248, 'reversal_transitions': 0, 'segment_starts': 1}
+13:31:02 INFO 127.0.0.1 GET /predict/00000099 -> 200 (1380 ms)
