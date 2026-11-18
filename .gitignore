@@ -1,0 +1,13 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+# raw dataset (not redistributed) and instruction PDFs
+Student folder/
+PathSnap_student_materials/
+*.zip
+# caches
+cache/
+.cache/
+# secrets
+.env
